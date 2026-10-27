@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Certificados - Iplacex</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Contenedor principal simulando la vista móvil */
+        .mobile-container {
+            width: 100%;
+            max-width: 480px;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+            padding-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cabecera con fondo blanco */
+        .header {
+            background-color: #ffffff;
+            padding: 15px 20px;
+        }
+
+        /* Recreación del logo de Iplacex en CSS */
+        .logo-box {
+            background-color: #264a87;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+        }
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            width: 22px;
+            height: 22px;
+            margin-right: 8px;
+        }
+        .logo-grid div {
+            background-color: #ffffff;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: -0.5px;
+        }
+        .logo-subtext {
+            font-size: 9px;
+            font-weight: normal;
+            text-align: right;
+            margin-top: 2px;
+            letter-spacing: 0;
+        }
+
+        /* Título de la página */
+        .page-title {
+            display: flex;
+            align-items: center;
+            padding: 25px 20px 20px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .page-title svg {
+            margin-right: 12px;
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: #264a87;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Tarjetas de información */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin: 0 20px 20px 20px;
+            padding: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .label {
+            font-weight: bold;
+            font-size: 14.5px;
+            margin-bottom: 6px;
+            color: #111111;
+        }
+        
+        .value {
+            font-size: 14.5px;
+            color: #222222;
+        }
+
+        /* Sección del certificado */
+        .cert-status {
+            font-weight: bold;
+            font-size: 14.5px;
+            margin-bottom: 20px;
+            color: #111111;
+        }
+        .cert-message {
+            font-size: 14.5px;
+            color: #333333;
+            margin-bottom: 25px;
+            display: flex;
+            line-height: 1.4;
+        }
+        .cert-message span {
+            color: #4a6a98;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        /* Cajas grises internas */
+        .gray-box {
+            background-color: #f7f7f7;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+        .gray-box:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Enlace "Ver documento" */
+        .doc-link {
+            color: #2b4985;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-size: 14.5px;
+        }
+        .doc-link svg {
+            margin-left: 6px;
+            width: 16px;
+            height: 16px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Botón Volver */
+        .btn-volver {
+            background-color: #2d508f;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            width: calc(100% - 40px);
+            margin: 10px 20px 0 20px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            box-sizing: border-box;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="mobile-container">
+    
+    <!-- Cabecera -->
+    <div class="header">
+        <div class="logo-box">
+            <div class="logo-grid">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+            <div class="logo-text">
+                Iplacex
+                <div class="logo-subtext">enovus</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Título Principal -->
+    <div class="page-title">
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4 4-7 8-7s8 3 8 7"></path>
+        </svg>
+        Validación de Certificados
+    </div>
+
+    <!-- Tarjeta de Datos Personales -->
+    <div class="card">
+        <div class="info-item">
+            <div class="label">Rut:</div>
+            <div class="value">15.680.329-4</div>
+        </div>
+        <div class="info-item">
+            <div class="label">Nombre:</div>
+            <div class="value">FERNANDO ANDRÉS SANHUEZA SEGUEL</div>
+        </div>
+        <div class="info-item">
+            <div class="label">Carrera:</div>
+            <div class="value">TÉCNICO EN PREVENCIÓN, TRATAMIENTO Y REHABILITACIÓN DE SUSTANCIAS</div>
+        </div>
+    </div>
+
+    <!-- Tarjeta de Estado de Certificado -->
+    <div class="card">
+        <div class="cert-status">Certificado vigente</div>
+        
+        <div class="cert-message">
+            <span>&gt;</span> El código ingresado corresponde a un CERTIFICADO DE TITULO válido
+        </div>
+
+        <div class="gray-box">
+            <div class="label">Fecha emisión:</div>
+            <div class="value">14/05/2025</div>
+        </div>
+
+        <div class="gray-box">
+            <div class="label">Fin:</div>
+            <div class="value">LOS FINES QUE ESTIME CONVENIENTE</div>
+        </div>
+
+        <div class="gray-box">
+            <div class="label">Ver certificado:</div>
+            <a href="#" class="doc-link">
+                Ver documento 
+                <svg viewBox="0 0 24 24">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Botón -->
+    <button class="btn-volver">Volver</button>
+
+</div>
+
+</body>
+</html>
